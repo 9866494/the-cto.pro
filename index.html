@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <!-- Required meta tags -->
@@ -7,21 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(94870573, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/94870573" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <title>Hello, world! My name is Rodion Ivanov, and I am the Architect</title>
 
     <style>
         img.me {
-            width: 200px;
+            width: 240px;
             border-radius: 50%;
             margin: 10px;
+            border: solid 8px rgb(222, 226, 230);
         }
 
         img.qr {
             width: 200px;
             margin: 40px;
+        }
+
+        .btn-row {
+            margin: 5px;
         }
 
         .container {
@@ -33,54 +61,90 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-3 d-none d-md-block"></div>
+            <div class="col-xs-12 col-md-6">
+
                 <img src="./img/me.jpg" class="me mx-auto d-block" alt="Rodion Ivanov">
+
+                <div>
+                    <h2 class="text-start">Hello, world!</h2>
+                    <h1 class="text-center">My name is <b>Rodion Ivanov</b></h1>
+                    <h2 class="text-end">and I am the Architect</h2>
+
+                    <p>On this page you can:</p>
+
+                    <ul>
+                        <li>find information about me</li>
+                        <li>contact me</li>
+                        <li>get information about my projects</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <hr>
+                    <p>about me:</p>
+
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank"
+                            href="https://spb.hh.ru/applicant/resumes/view?resume=e4de4b84ff0be77d230039ed1f735349557a58">
+                            <i class="bi bi-file-earmark-person-fill float-start"></i> CV in Russian
+                        </a>
+                    </div>
+
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://github.com/9866494">
+                            <i class="bi bi-github float-start"></i> Github profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row btn-row">
+                    <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://www.instagram.com/awful85">
+                        <i class="bi bi-instagram float-start"></i> Instagram page
+                    </a>
+                </div>
+
+                <div class="row btn-row">
+                    <a class="col btn btn-outline-light btn-lg" target="_blank"
+                        href="https://app.assessfirst.com/_/profile/tnsmj5ni-rodion-ivanov">
+                        <i class="bi bi-speedometer2 float-start"></i> Profile on assessfirst.com
+                    </a>
+                </div>
+
+                <div>
+                    <hr>
+                    <p>contact me:</p>
+
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://t.me/awful85">
+                            <i class="bi bi-telegram float-start"></i> Message me on telegram
+                        </a>
+                    </div>
+
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank"
+                            href="mailto:9866494@gmail.com?subject=Hello%20from%20the-architect.pro">
+                            <i class="bi bi-envelope-paper float-start"></i> Mail me
+                        </a>
+                    </div>
+
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light" target="_blank"
+                            href="https://calendly.com/rodion_ivanov/1-hour-google-meet">
+                            <i class="bi bi-calendar2-check float-start"></i> Schedule google meet
+                        </a>
+                    </div>
+                </div>
             </div>
+            <div class="col-3 d-none d-md-block"></div>
         </div>
 
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <h2 class="text-start">Hello, world!</h2>
-                <h1 class="text-center">My name is <b>Rodion Ivanov</b></h1>
-                <h2 class="text-end">and I am the Architect!</h2>
-
-                <p>On this page you can:</p>
-
-                <ul>
-                    <li>find information about me</li>
-                    <li>contact me</li>
-                    <li>get information about my projects</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <p class="text-end">information about me:</p>
-                <hr>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-3"></div>
-            <a class="col-6 btn btn-primary"
-                target="_blank"
-                href="https://spb.hh.ru/applicant/resumes/view?resume=e4de4b84ff0be77d230039ed1f735349557a58">
-                Russian CV
-            </a>
-        </div>
-
-        <div class="row">
+        <div class="row ">
             <div class="col-12">
                 <img src="./img/qr.png" class="qr mx-auto d-block" alt="the-architect.pro QR code">
             </div>
         </div>
-
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
