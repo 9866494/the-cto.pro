@@ -33,7 +33,17 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <title>Hello, world! My name is Rodion Ivanov, and I am the Architect</title>
+    <!-- favicon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- /favicon stuff -->
+
+    <title>Rodion Ivanov - the Architect</title>
 
     <style>
         img.me {
@@ -54,6 +64,25 @@
 
         .container {
             margin-top: 20px;
+        }
+
+        .project-image {
+            height: 100%;
+            object-fit: scale-down;
+        }
+
+        .project-status {
+            margin: -24px 4px;
+            position: relative;
+            z-index: 2;
+        }
+
+        body {
+            background-image: url(./img/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: 1000px;
+            background-color: #22262b;
         }
     </style>
 </head>
@@ -76,13 +105,15 @@
                     <ul>
                         <li>find information about me</li>
                         <li>contact me</li>
-                        <li>get information about my projects</li>
+                        <li>get information about my current and recent projects</li>
                     </ul>
                 </div>
 
                 <div>
-                    <hr>
-                    <p>about me:</p>
+                    <h4 id="about-me">
+                        about me
+                        <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#about-me"></a>
+                    </h4>
 
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank"
@@ -96,24 +127,28 @@
                             <i class="bi bi-github float-start"></i> Github profile
                         </a>
                     </div>
-                </div>
 
-                <div class="row btn-row">
-                    <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://www.instagram.com/awful85">
-                        <i class="bi bi-instagram float-start"></i> Instagram page
-                    </a>
-                </div>
 
-                <div class="row btn-row">
-                    <a class="col btn btn-outline-light btn-lg" target="_blank"
-                        href="https://app.assessfirst.com/_/profile/tnsmj5ni-rodion-ivanov">
-                        <i class="bi bi-speedometer2 float-start"></i> Profile on assessfirst.com
-                    </a>
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank"
+                            href="https://www.instagram.com/awful85">
+                            <i class="bi bi-instagram float-start"></i> Instagram page
+                        </a>
+                    </div>
+
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank"
+                            href="https://app.assessfirst.com/_/profile/tnsmj5ni-rodion-ivanov">
+                            <i class="bi bi-speedometer2 float-start"></i> Profile on assessfirst.com
+                        </a>
+                    </div>
                 </div>
 
                 <div>
-                    <hr>
-                    <p>contact me:</p>
+                    <h4 id="contact-me">
+                        contact me
+                        <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#contact-me"></a>
+                    </h4>
 
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://t.me/awful85">
@@ -129,12 +164,13 @@
                     </div>
 
                     <div class="row btn-row">
-                        <a class="col btn btn-outline-light" target="_blank"
+                        <a class="col btn btn-outline-light btn-lg" target="_blank"
                             href="https://calendly.com/rodion_ivanov/1-hour-google-meet">
                             <i class="bi bi-calendar2-check float-start"></i> Schedule google meet
                         </a>
                     </div>
                 </div>
+
             </div>
             <div class="col-3 d-none d-md-block"></div>
         </div>
