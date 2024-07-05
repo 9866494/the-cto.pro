@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="i18n en" data-bs-theme="dark">
 
 <head>
     <!-- Required meta tags -->
@@ -28,6 +28,10 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/97746798" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <!-- jQuery 3.x -->
+    <script   src="https://code.jquery.com/jquery-3.7.1.min.js"   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="   crossorigin="anonymous"></script>
+    <!-- /jQuery 3.x -->
 
     <!-- favicon stuff -->
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
@@ -79,17 +83,30 @@
             background-repeat: no-repeat;
             background-position: top;
             background-size: 1000px;
-            background-color: #22262b;
+            background-color: #22252a;
         }
 
         .about {
             margin: 8px;
+        }
+
+        #lang {
+            width: 110px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
+        
+        <div class="row">
+            <div class="col-12">
+                <select class="form-select float-end" aria-label="Choose language" id="lang">
+                    <option value="en" selected>ENG 🇬🇧</option>
+                    <option value="ru">РУC 🇷🇺</option>
+                  </select>
+            </div>
+        </div>
         <div class="row">
             <div class="col-3 d-none d-md-block"></div>
             <div class="col-xs-12 col-md-6">
@@ -97,97 +114,171 @@
                 <img src="./img/me.jpg" class="me mx-auto d-block" alt="Rodion Ivanov">
 
                 <div>
-                    <h2 class="text-start">Hello, world!</h2>
-                    <h1 class="text-center">My name is <b>Rodion Ivanov</b></h1>
-                    <h2 class="text-end">and I am the CTO</h2>
+                    <h2 class="text-start">
+                        <div class="i18n en">Hello World!</div>
+                        <div class="i18n ru">Привет!</div>
+                    </h2>
+                    <h1 class="text-center">
+                        <div class="i18n en">My name is <b>Rodion Ivanov</b></div> 
+                        <div class="i18n ru">Меня зовут <b>Родион Иванов</b></div>
+                    </h1>
+                    <h2 class="text-end">
+                        <div class="i18n en">and I am the CTO</div>
+                        <div class="i18n ru">и я Технический директор</div>
+                    </h2>
 
-                    <p>On this page you can:</p>
+                    <p>
+                        <div class="i18n en">On this page you can:</div>
+                        <div class="i18n ru">На этой странице найдете:</div> 
+                    </p>
 
                     <ul>
-                        <li>find information about me</li>
-                        <li>contact me</li>
-<!--                         <li>get information about my current and recent projects</li> -->
+                        <li>
+                            <div class="i18n en">find information about me</div>
+                            <div class="i18n ru">информацию обо мне</div>
+                        </li>
+                        <li>
+                            <div class="i18n en">contact me</div>
+                            <div class="i18n ru">мои контактные данные</div>
+                        </li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 id="about-me">
-                        about me
+                        <div class="i18n en">about me</div>
+                        <div class="i18n ru">обо мне</div>
                         <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#about-me"></a>
                     </h4>
 
                     <div class="row">
-                        <small class="about">
-                            <p>
-                                I began my IT journey in with my own business in 2011. Independently and from scratch, I sold, designed, developed, and implemented a restaurant automation system.
-                            </p>
+                        <div class="i18n en">
+                            <small class="about">
+                                <p>
+                                    I began my IT journey with as a founder of my own business in 2011. Independently and from scratch, I sold, designed, developed, and implemented a restaurant automation system.
+                                </p>
 
-                            <p>
-                                After that, I worked at Sberbank where I was responsible for data storage and web development of the bank's local products for automating back-office processes.
-                            </p>
+                                <p>
+                                    After that, I worked at <a href="https://www.sberbank.com/" target="_blank">Sberbank</a> where I was responsible for data warehouse, business intelligence tools and web development of the bank's local products for automating back-office processes.
+                                </p>
 
-                            <p>
-                                For the past years, I have been working in EdTech. I have designed and led the development of several systems for the government. Participated as a TechLead in the launch of the German info business platform EZFunnels. After that, I joined Skyeng team as an Architect.
-                            <p>
+                                <p>
+                                    For the past years, I have been working in EdTech:
+                                    <ul>
+                                        <li>I have designed and led the development of several systems for the government as an software Architect of <a href="https://www.sberbank.com/" target="_blank">Netrika</a>.</li>
+                                        <li>Participated as a TechLead in the launch of the German info business platform <a href="https://ezfunnels.com" target="_blank">EZFunnels</a>.</li>
+                                        <li>After that, I joined <a href="https://skyeng.ru" target="_blank">Skyeng</a> team as an Solution and Enterprise Architect.</li>
+                                    </ul>
+                                <p>
 
-                            <p>
-                                I have extensive experience in leading technical teams, a good understanding of a product-oriented approach and Agile development processes. I have experience in hiring and building teams, creating Ops+DevOps infrastructure, and establishing project management processes in development.
-                            </p>
-                        </small>
-                    </div>
+                                <p>
+                                    I have extensive experience in software Architecture, leading technical teams, a good understanding of a product-oriented approach and Agile development processes. I have experience in hiring and building teams, creating Ops+DevOps infrastructure, and establishing project management processes in development.
+                                </p>
+                            </small>
+                        </div>
 
-                    <div class="row btn-row">
-                        <a class="col btn btn-outline-light btn-lg" target="_blank"
-                            href="https://hh.ru/resume/5d3c6f67ff0d295fe30039ed1f434e65797235">
-                            <i class="bi bi-file-earmark-person-fill float-start"></i> Russian CV
-                        </a>
+                        <div class="i18n ru">
+                            <small class="about">
+                                <p>
+                                    Я начинал свой путь в ИТ с собственного бизнеса 2011 году. Самостоятельно и с нуля, продал, спроектировал, разработал и внедрил систему автоматизации ресторана. 
+                                </p>
+
+                                <p>
+                                    После этого был <a href="https://www.sberbank.com/" target="_blank">Сбербанк</a> в котором я отвечал за хранилища данных и web разработку локальных продуктов банка для автоматизации бек офисных процессов. Там я был сертифицирован как зеленый пояс LEAN 6 Sigmas, внедрив ряд проектов оптимизации банковских процессов. 
+                                </p>
+
+                                <p>
+                                    В последние годы я работаю в EdTech:
+                                    <ul>
+                                        <li>Я успел спроектировать и лидировать в роли software Архитектора разработку ряда систем для государства в компании <a href="https://www.sberbank.com/" target="_blank">Netrika</a>.</li>
+                                        <li>Участвовал в запуске немецкого аналога getcourse - <a href="https://ezfunnels.com" target="_blank">EZFunnels</a> в роли Технического лида.</li>
+                                        <li>После чего присоединился к команде <a href="https://skyeng.ru" target="_blank">Skyeng</a> в роли solution и корпоративного Архитектора.</li>
+                                    </ul>
+                                <p>
+
+                                <p>
+                                    У меня обширный опыт создания системной Архитектуры, руководства техническими командами, хорошее понимание продуктового подхода и процессов разработки по методологии Agile. Есть опыт найма и формирования команд, создания инфраструктуры Ops+DevOps и построения процессов проектного управления в разработке.
+                                </p>
+                            </small>
+                        </div>
                     </div>
 
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank"
                             href="https://www.linkedin.com/in/the-architect-pro">
-                            <i class="bi bi-linkedin float-start"></i> LinkedIn profile
+                            <i class="bi bi-linkedin float-start"></i> 
+                            <div class="i18n en">LinkedIn profile</div>
+                            <div class="i18n ru">профиль LinkedIn</div>
+                        </a>
+                    </div>
+
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank"
+                            href="https://hh.ru/resume/5d3c6f67ff0d295fe30039ed1f434e65797235">
+                            <i class="bi bi-file-earmark-person-fill float-start"></i> 
+                            <div class="i18n en">Russian CV</div> 
+                            <div class="i18n ru">резюме на hh.ru</div>
+                            
+                        </a>
+                    </div>
+                    
+                    <div class="row btn-row">
+                        <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://t.me/the_cto_pro">
+                            <i class="bi bi-telegram float-start"></i> 
+                            <div class="i18n en">Telegram chanel</div>
+                            <div class="i18n ru">канал Telegram</div>
                         </a>
                     </div>
                     
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://github.com/9866494">
-                            <i class="bi bi-github float-start"></i> Github profile
+                            <i class="bi bi-github float-start"></i> 
+                            <div class="i18n en">Github profile</div>
+                            <div class="i18n ru">профиль Github</div>
                         </a>
                     </div>
-
 
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank"
                             href="https://www.instagram.com/awful85">
-                            <i class="bi bi-instagram float-start"></i> Instagram page
+                            <i class="bi bi-instagram float-start"></i> 
+                            <div class="i18n en">Instagram page</div>
+                            <div class="i18n ru">страница Instagram</div>
                         </a>
                     </div>
                 </div>
 
                 <div>
                     <h4 id="contact-me">
-                        contact me
+                        <div class="i18n en">contact me</div>
+                        <div class="i18n ru">связаться со мной</div>
                         <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#contact-me"></a>
                     </h4>
 
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank" href="https://t.me/awful85">
-                            <i class="bi bi-telegram float-start"></i> Message me on telegram
+                            <i class="bi bi-telegram float-start"></i> 
+                            <div class="i18n en">Message me on telegram</div>
+                            <div class="i18n ru">написать в telegram</div>
                         </a>
                     </div>
 
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank"
                             href="mailto:9866494@gmail.com?subject=Hello%20from%20the-cto.pro">
-                            <i class="bi bi-envelope-paper float-start"></i> Mail me
+                            <i class="bi bi-envelope-paper float-start"></i> 
+                            <div class="i18n en">Mail me</div>
+                            <div class="i18n ru">написать на почту</div>
                         </a>
                     </div>
 
                     <div class="row btn-row">
                         <a class="col btn btn-outline-light btn-lg" target="_blank"
                             href="https://calendly.com/rodion_ivanov/1-hour-google-meet">
-                            <i class="bi bi-calendar2-check float-start"></i> Schedule google meet
+                            <i class="bi bi-calendar2-check float-start"></i> 
+                            <div class="i18n en">Schedule google meet</div>
+                            <div class="i18n ru">запланировать созвон</div>
+                            
                         </a>
                     </div>
                 </div>
@@ -206,6 +297,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                const lang_ru = 'ru'
+                const lang_en = 'en'
+
+                function toggleLang(lang) {
+                    $('.i18n').hide()
+                    $('.'+lang).show()
+                }
+
+                $('#lang').change(function() {
+                    var lang = $(this).val()
+                    toggleLang(lang)
+                })
+
+                var userLang = navigator.language || navigator.userLanguage; 
+                var lang = lang_en
+
+                if (userLang == lang_ru) {
+                    lang = lang_ru
+                } 
+
+                $('#lang').val(lang).change().trigger('change')
+            });
+        </script>
 </body>
 
 </html>
